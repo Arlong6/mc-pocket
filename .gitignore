@@ -1,0 +1,24 @@
+## xcodegen-generated (regenerated from project.yml)
+*.xcodeproj/
+*.xcworkspace/
+
+## Build output
+build/
+DerivedData/
+.build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## User settings
+xcuserdata/
+*.xcuserstate
+
+## Swift Package Manager
+.swiftpm/
+Package.resolved
+
+## Misc
+.DS_Store
+*.swp
+*.log

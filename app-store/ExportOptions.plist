@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template used by `xcodebuild -exportArchive` to push a build to App Store
+  Connect. After running `xcodegen generate` once with your DEVELOPMENT_TEAM
+  baked in, the typical pipeline is:
+
+  1. xcodebuild -project MCPocket.xcodeproj \
+       -scheme MCPocket \
+       -configuration Release \
+       -archivePath build/MCPocket.xcarchive \
+       archive
+
+  2. xcodebuild -exportArchive \
+       -archivePath build/MCPocket.xcarchive \
+       -exportOptionsPlist app-store/ExportOptions.plist \
+       -exportPath build/Export \
+       -allowProvisioningUpdates
+
+  3. xcrun altool --upload-app -f build/Export/MCPocket.ipa \
+       --type ios --apiKey <KEY_ID> --apiIssuer <ISSUER_ID>
+
+  Replace <YOUR_TEAM_ID> below with your Apple Developer Program team id (10
+  chars, found under Account → Membership at developer.apple.com).
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>method</key>
+  <string>app-store</string>
+  <key>teamID</key>
+  <string>YOUR_TEAM_ID</string>
+  <key>signingStyle</key>
+  <string>automatic</string>
+  <key>uploadBitcode</key>
+  <false/>
+  <key>uploadSymbols</key>
+  <true/>
+  <key>compileBitcode</key>
+  <false/>
+  <key>stripSwiftSymbols</key>
+  <true/>
+  <key>destination</key>
+  <string>upload</string>
+</dict>
+</plist>
