@@ -22,3 +22,11 @@ Package.resolved
 .DS_Store
 *.swp
 *.log
+
+## 密鑰與憑證（APNs 的 AuthKey_*.p8 等）
+.env
+.env.*
+!.env.example
+*.p8
+*.pem
+*.p12
